@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aera Pure — Nettoyage à domicile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="no-scroll">
+  <!-- Intro / Splash -->
+  <div id="intro" aria-hidden="true">
+    <div class="intro-inner">
+      <span class="intro-logo">AERA PURE</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo"><span class="aera">Aera</span> <span>Pure</span></div>
+      <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#prestations">Prestations</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="cta" href="#contact">Devis gratuit</a>
+    </div>
+  
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#services">Services</a>
+    <a href="#tarifs">Tarifs</a>
+    <a href="#prestations">Prestations</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Nettoyage auto à domicile</h1>
+          <p>Nous venons chez vous pour un lavage impeccable – intérieur, extérieur ou complet. Des prestations claires, des tarifs transparents.</p>
+          <a href="#tarifs" class="cta large">Voir nos tarifs</a>
+          <br/>
+          <a href="#contact" class="cta large cta-yellow">Réserver maintenant</a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="bubble b1"></div>
+          <div class="bubble b2"></div>
+          <div class="bubble b3"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <div class="container">
+        <h2>Nos 3 formules</h2>
+        <p class="sub">Choisissez votre catégorie de véhicule puis explorez les sous‑menus pour les détails.</p>
+        <div class="cards">
+          <article class="card" data-category="citadine">
+            <div class="card-top"><h3>Citadine</h3><div class="price">à partir de <strong>20€</strong></div></div>
+            <ul class="features"><li>Intérieur & extérieur</li><li>Intérieur seul</li><li>Extérieur seul</li></ul>
+            <button class="btn show-menu" data-category="citadine">Voir les tarifs</button>
+          </article>
+          <article class="card" data-category="suv">
+            <div class="card-top"><h3>SUV / Monospace</h3><div class="price">à partir de <strong>30€</strong></div></div>
+            <ul class="features"><li>Intérieur & extérieur</li><li>Intérieur seul</li><li>Extérieur seul</li></ul>
+            <button class="btn show-menu" data-category="suv">Voir les tarifs</button>
+          </article>
+          <article class="card" data-category="utilitaire">
+            <div class="card-top"><h3>Utilitaire</h3><div class="price">à partir de <strong>20€</strong></div></div>
+            <ul class="features"><li>Complet avec cabine</li><li>Int./Ext. sans arrière</li><li>Cabine seule</li><li>Extérieur seul</li></ul>
+            <button class="btn show-menu" data-category="utilitaire">Voir les tarifs</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+<section id="offres" class="offers">
+  <div class="container">
+    <h2>Offres spéciales</h2>
+    <div class="offers-grid">
+      <div class="offer-card">
+        <div class="offer-badge">-10%</div>
+        <h3>Sur la 2ème voiture</h3>
+        <p>Appliqué automatiquement lors de la même intervention (même adresse, même jour).</p>
+      </div>
+      <div class="offer-card">
+        <div class="offer-badge">5➜1</div>
+        <h3>Carte fidélité</h3>
+        <p>5 nettoyages = 1 complet offert. Valable sur Citadine ou SUV/Monospace.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section id="tarifs" class="pricing">
+      <div class="container">
+        <h2>Tarifs rapides</h2>
+        <div class="quick-grid">
+          <div class="quick">
+            <h4>Citadine 🚗</h4>
+            <p><span>Intérieur + extérieur</span><strong>80€</strong></p>
+            <p><span>Intérieur</span><strong>60€</strong></p>
+            <p><span>Extérieur</span><strong>20€</strong></p>
+              <div class="ttc-note">TTC</div>
+      </div>
+
+          <div class="quick">
+            <h4>SUV / Monospace 🚙</h4>
+            <p><span>Intérieur + extérieur</span><strong>120€</strong></p>
+            <p><span>Intérieur</span><strong>90€</strong></p>
+            <p><span>Extérieur</span><strong>30€</strong></p>
+              <div class="ttc-note">TTC</div>
+      </div>
+
+          <div class="quick">
+            <h4>Utilitaire 🚐</h4>
+            <p><span>Complet avec cabine</span><strong>130€</strong></p>
+            <p><span>Int./Ext. sans arrière</span><strong>90€</strong></p>
+            <p><span>Cabine seule</span><strong>40€</strong></p>
+            <p><span>Extérieur</span><strong>20€</strong></p>
+              <div class="ttc-note">TTC</div>
+      </div>
+<div class="quick supplements">
+  <h4>Suppléments ✨</h4>
+  <p><span>Désinfection tapis vapeur</span><strong>+10€</strong></p>
+  <p><span>Poils d’animaux (intensif)</span><strong>+15€</strong></p>
+  <p><span>Sièges tissus (shamp.)</span><strong>+25€</strong></p>
+  <p><span>Soins (Cuir, Plastique)</span><strong>+15€</strong></p>
+  <p class="ttc-note">TTC</p>
+</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prestations" class="prestations">
+      <div class="container">
+        <h2>Nos prestations effectuées</h2>
+        <p class="sub">Découvrez nos résultats avant / après en glissant la barre.</p>
+        <div class="ba-slider">
+  <!-- droite -->
+  <img src="images/apres1.jpg" alt="Après">
+  <div class="resize"><!-- gauche -->
+    <img src="images/avant1.jpg" alt="Avant">
+  </div>
+  <span class="handle"></span>
+</div>
+      </div>
+    </section>
+
+
+
+
+    
+<section id="avis" class="avis section-gap-bottom">
+  <div class="container">
+    <h2>Avis clients</h2>
+    <p class="sub">Nos clients nous font confiance — note moyenne 5/5</p>
+    <div class="avis-grid">
+      <div class="avis-card">
+        <div class="stars">★★★★★</div>
+        <p>"Excellente qualité de travail, rapide et efficace. Une prestation d’un rapport qualité prix très honnêtes."</p>
+        <strong>— Thomas Di Cristofaro.</strong>
+      </div>
+      <div class="avis-card">
+        <div class="stars">★★★★★</div>
+        <p>"Super travail pour ma voiture, nettoyage complet parfaitement réalisé, et équipe très ponctuelle ! Je recommande."</p>
+        <strong>— Thomas.</strong>
+      </div>
+      <div class="avis-card">
+        <div class="stars">★★★★★</div>
+        <p>"Je tiens à remercier Aera Pure pour le service qu’ils ont pu me fournir, le travail est top et les prix très raisonnable comparé à la concurrence."</p>
+        <strong>— Nykxu.</strong>
+      </div>
+      <div class="avis-card">
+        <div class="stars">★★★★★</div>
+        <p>"Super boulot, j’avais un intérieur vraiment sale, tout est ressorti comme neuf. Merci encore."</p>
+        <strong>— Jérome _.</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section id="contact" class="contact">
+      <div class="container contact-inner">
+        <div class="contact-text">
+          <h2>Demander un devis</h2>
+          <p>Laissez‑nous vos coordonnées – nous répondons rapidement.</p>
+          <ul class="ticks">
+            <li>Intervention à domicile</li>
+            <li>Produits respectueux & résultat garanti</li>
+            <li>Paiement sécurisé</li>
+          </ul>
+
+          <div class="contact-cta">
+            <a class="btn-whatsapp" href="https://wa.me/33650137216?text=Bonjour%20Aera%20Pure%2C%20je%20souhaite%20un%20devis%20pour%20un%20nettoyage%20auto." target="_blank" rel="noopener">WhatsApp direct</a>
+            <div class="call-line">ou appelez-nous : <a href="tel:+33650137216" class="tel-link">06&nbsp;50&nbsp;13&nbsp;72&nbsp;16</a></div>
+          </div>
+
+
+
+
+        </div>
+        <form class="contact-form" data-emoji="📩"  id="quoteForm" data-whatsapp="33650137216" method="POST" action="https://formspree.io/f/xpwlevav" data-formspree="true">
+          <label>Nom
+            <input id="name" required type="text" placeholder="Votre nom"/>
+          </label>
+          <label>Téléphone
+            <input id="phone" required type="tel" placeholder="06 00 00 00 00"/>
+          </label>
+          <label>Catégorie
+            <select required id="categorySelect">
+              <option value="">Choisir…</option>
+              <option>Citadine</option>
+              <option>SUV / Monospace</option>
+              <option>Utilitaire</option>
+            </select>
+          </label>
+          <label>Prestation
+            <select id="prestation" disabled>
+              <option value="">Choisir…</option>
+            </select>
+          </label>
+          <div class="price-hint" id="priceHint" aria-live="polite"></div>
+
+          <fieldset class="suppl-group">
+            <legend>Suppléments</legend>
+            <label class="suppl-item">
+              <input type="checkbox" name="supplements" value="steam" data-price="10">
+              <span>Désinfection tapis vapeur</span><em>+10€</em>
+            </label>
+            <label class="suppl-item">
+              <input type="checkbox" name="supplements" value="pets" data-price="15">
+              <span>Poils d’animaux (intensif)</span><em>+15€</em>
+            </label>
+            <label class="suppl-item">
+              <input type="checkbox" name="supplements" value="seats" data-price="25">
+              <span>Sièges tissus (shamp.)</span><em>+25€</em>
+            </label>
+            <label class="suppl-item">
+              <input type="checkbox" name="supplements" value="care" data-price="15">
+              <span>Soins (Cuir, Plastique)</span><em>+15€</em>
+            </label>
+          </fieldset>
+          <div class="total-line">
+            <span>Total estimé</span>
+            <strong id="totalPrice">—</strong>
+            <small class="ttc">TTC</small>
+          </div>
+    
+          <label>Message
+            <textarea id="message" rows="4" placeholder="Décrivez votre besoin"></textarea>
+          </label>
+          <button class="btn">Envoyer</button>
+          
+        
+    <!-- Auto-injected hidden fields for Formspree (filled by script.js on submit) -->
+    <input type="hidden" id="prestationText"     name="Prestation (libellé)" value="">
+    <input type="hidden" id="basePriceHidden"    name="Tarif de base" value="">
+    <input type="hidden" id="supplementsHidden"  name="Suppléments (liste)" value="">
+    <input type="hidden" id="totalHidden"        name="Total estimé TTC" value="">
+    
+<input type="hidden" name="_next" value="./merci.html">
+<input type="hidden" name="_subject" value="Nouveau devis — Aera Pure"></form>
+      </div>
+    </section>
+  </main>
+
+  
+<section id="faq" class="faq">
+  <div class="container">
+    <input id="faqSearch" class="faq-search" type="search" placeholder="Rechercher dans la FAQ…">
+    <h2>Questions fréquentes</h2>
+    <div class="faq-item">
+      <button class="faq-question">Combien de temps dure un nettoyage ?</button>
+      <div class="faq-answer">En moyenne 1h à 2h selon la formule choisie.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Dois-je me déplacer ou intervenez-vous à domicile ?</button>
+      <div class="faq-answer">Nous venons directement à votre domicile.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Quels moyens de paiement acceptez-vous ?</button>
+      <div class="faq-answer">CB, espèces, virement bancaire.</div>
+    </div>
+     <div class="faq-item">
+      <button class="faq-question">Quels produits utilisez-vous ?</button>
+      <div class="faq-answer">Nous travaillons uniquement avec des produits professionnels respectueux de l’environnement et sans danger pour votre véhicule.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Couvrez-vous toute la région ?</button>
+      <div class="faq-answer">Oui, nous intervenons principalement sur thionville dans un rayon de 35 kilomètres. Des frais peuvenent s'appliquer selon la distance.</div>
+    </div>
+  </div>
+</section>><span class="aera">Aera</span> <span>Pure</span></div>
+      <p>© <span id="year"></span> Aera Pure — Nettoyage à domicile.</p>
+    </div>
+  
+<div class="legal">
+  <a href="mentions-legales.html">Mentions légales</a> • 
+  <a href="#confidentialite">Politique de confidentialité</a>
+</div>
+<div class="siret">SIRET : 123 456 789 00012 — Assurance RC Pro incluse</div>
+
+
+  
+    <div class="pay-logos">
+      <span class="badge">💳 CB</span>
+      <span class="badge">💶 Espèces</span>
+      <span class="badge">🔄 Virement</span>
+    </div>
+  </footer>
+
+
+  <!-- Modal Tarifs -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-dialog" role="document" aria-modal="true">
+      <button class="modal-close" aria-label="Fermer" data-close>&times;</button>
+      <h3 id="modal-title">Tarifs</h3>
+      <div class="submenu" id="submenu"></div>
+      <div class="grid" id="grid"></div>
+      <div class="modal-note">Les prix ci‑dessous sont fixes et s’entendent TTC.</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const intro = document.getElementById('intro');
+  const body = document.body;
+  function hideIntro(){
+    if(!intro || intro.classList.contains('fade')) return;
+    intro.classList.add('fade');
+    body.classList.remove('no-scroll');
+    setTimeout(()=> intro.remove(), 1200);
+  }
+  // auto fade after 1800ms
+  setTimeout(hideIntro, 1800);
+  // allow user to skip
+  ['click','keydown','wheel','touchstart'].forEach(evt => {
+    window.addEventListener(evt, hideIntro, { once:false });
+  });
+});
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  // FAQ toggle
+  document.querySelectorAll('.faq-question').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      btn.parentElement.classList.toggle('open');
+    });
+  });
+  // Prefill form from tariff CTAs
+  document.querySelectorAll('.reserve-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const cat = btn.getAttribute('data-category');
+      document.getElementById('categorySelect').value = cat;
+      document.getElementById('prestation').disabled = false;
+      document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+    });
+  });
+});
+</script>
+
+</body>
+</html>
