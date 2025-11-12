@@ -494,3 +494,68 @@ document.addEventListener('click', function(e){
 })();
 
 
+/* -------------------- NEIGE -------------------- */
+document.addEventListener("DOMContentLoaded", () => {
+  const canvas = document.getElementById("snow-canvas");
+  if (!canvas) return;
+
+  const ctx = canvas.getContext("2d");
+  let W = window.innerWidth;
+  let H = window.innerHeight;
+  canvas.width = W;
+  canvas.height = H;
+
+  // Création des flocons
+  const maxFlakes = 120; // nombre de flocons
+  const flakes = [];
+  for (let i = 0; i < maxFlakes; i++) {
+    flakes.push({
+      x: Math.random() * W,
+      y: Math.random() * H,
+      r: Math.random() * 3 + 1, // taille du flocon
+      d: Math.random() * maxFlakes, // densité
+    });
+  }
+
+  function drawFlakes() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = "white";
+    ctx.beginPath();
+    for (let i = 0; i < maxFlakes; i++) {
+      const f = flakes[i];
+      ctx.moveTo(f.x, f.y);
+      ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2, true);
+    }
+    ctx.fill();
+    moveFlakes();
+  }
+
+  let angle = 0;
+  function moveFlakes() {
+    angle += 0.01;
+    for (let i = 0; i < maxFlakes; i++) {
+      const f = flakes[i];
+      f.y += Math.cos(angle + f.d) + 1 + f.r / 2;
+      f.x += Math.sin(angle) * 0.8;
+
+      if (f.y > H) {
+        flakes[i] = { x: Math.random() * W, y: 0, r: f.r, d: f.d };
+      }
+    }
+  }
+
+  function animateSnow() {
+    drawFlakes();
+    requestAnimationFrame(animateSnow);
+  }
+
+  animateSnow();
+
+  // Ajuste la taille si on redimensionne la fenêtre
+  window.addEventListener("resize", () => {
+    W = window.innerWidth;
+    H = window.innerHeight;
+    canvas.width = W;
+    canvas.height = H;
+  });
+});
