@@ -492,3 +492,74 @@ document.addEventListener('click', function(e){
   // Export (optional)
   window.updateTotal = updateTotal;
 })();
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  /* ---------- 1) Bonnet sur le logo ---------- */
+  // Essaie de trouver ton logo : adapte si tu as une classe spécifique.
+  const logo =
+    document.querySelector('.logo, .brand, .site-title, header a[href="/"], header .navbar-brand, a[href="/"]');
+  if (logo && !logo.classList.contains('has-xmas-hat')) {
+    logo.classList.add('has-xmas-hat');
+    const hat = document.createElement('span');
+    hat.className = 'xmas-hat';
+    hat.innerHTML = `
+      <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 86 C30 50, 84 40, 114 60 L102 86 Z" fill="#e11d48"/>
+        <rect x="20" y="78" width="84" height="18" rx="9" fill="#ffffff"/>
+        <circle cx="104" cy="54" r="12" fill="#ffffff"/>
+      </svg>`;
+    logo.style.position = 'relative';
+    logo.appendChild(hat);
+  }
+
+  /* ---------- 2) Neige (canvas simple & performant) ---------- */
+  const canvas = document.getElementById('snow-canvas');
+  const ctx = canvas.getContext('2d');
+  let W, H, flakes;
+
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+    const count = Math.min(220, Math.floor(W * H / 12000)); // densité adaptative
+    flakes = Array.from({ length: count }).map(() => ({
+      x: Math.random() * W,
+      y: Math.random() * H,
+      r: 1 + Math.random() * 2.2,
+      s: 0.3 + Math.random() * 0.8,   // speed
+      a: Math.random() * Math.PI * 2, // angle
+      drift: 0.6 + Math.random() * 0.8
+    }));
+  }
+  function tick() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = '#ffffff';
+    flakes.forEach(f => {
+      f.y += f.s;
+      f.x += Math.cos(f.a += 0.01) * f.drift * 0.3;
+      if (f.y > H + 5) { f.y = -5; f.x = Math.random() * W; }
+      if (f.x > W + 5) f.x = -5;
+      if (f.x < -5) f.x = W + 5;
+      ctx.beginPath(); ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2); ctx.fill();
+    });
+    requestAnimationFrame(tick);
+  }
+  window.addEventListener('resize', resize);
+  resize(); tick();
+
+  /* ---------- 3) Bandeau Offre Noël ---------- */
+  const offer = document.getElementById('xmas-offer');
+  const closeBtn = offer?.querySelector('.xmas-offer__close');
+  const end = new Date(new Date().getFullYear(), 11, 26, 23, 59, 59); // 26/12, 23:59
+
+  const dismissed = localStorage.getItem('xmasOfferClosed') === '1';
+  if (offer) {
+    if (new Date() > end || dismissed) {
+      offer.classList.add('hidden');
+    }
+    closeBtn?.addEventListener('click', () => {
+      offer.classList.add('hidden');
+      localStorage.setItem('xmasOfferClosed', '1');
+    });
+  }
+});
